@@ -158,20 +158,10 @@ FamixJavaGenerator >> defineHierarchy [
 
 	method --|> containerEntity.
 	method --|> #TMethod.
-	method --|> #TWithParameters.
-	method --|> #TInvocable.
-	method --|> #TWithInvocations.
-	method --|> #TWithReferences.
-	method --|> #TTypedStructure.
-	method --|> #TWithAccesses.
-	method --|> #TWithLocalVariables.
-	method --|> #TWithImplicitVariables.
-	method --|> #TWithSignature.
 	method --|> #TWithThrownExceptions.
 	method --|> #TWithDeclaredExceptions.
 	method --|> #TWithCaughtExceptions.
-	method --|> #TWithClassScope.
-	method --|> #TWithStatements.
+	
 
 	caughtException --|> exception.
 	caughtException --|> #TCaughtException.

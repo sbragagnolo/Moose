@@ -12,6 +12,8 @@ Trait {
 		'#kind',
 		'#parentType => FMOne type: #FamixTWithMethods opposite: #methods'
 	],
+	#traits : 'FamixTWithParameters + FamixTInvocable + FamixTWithInvocations + FamixTWithReferences + FamixTWithAccesses + FamixTWithLocalVariables + FamixTWithImplicitVariables + FamixTWithSignature + FamixTWithStatements',
+	#classTraits : 'FamixTWithParameters classTrait + FamixTInvocable classTrait + FamixTWithInvocations classTrait + FamixTWithReferences classTrait + FamixTWithAccesses classTrait + FamixTWithLocalVariables classTrait + FamixTWithImplicitVariables classTrait + FamixTWithSignature classTrait + FamixTWithStatements classTrait',
 	#category : #'Famix-Traits-Method'
 }
 
@@ -42,7 +44,7 @@ FamixTMethod classSide >> generatedSlotNames [
 { #category : #generator }
 FamixTMethod classSide >> generatedTraitNames [
 	<generated>
-	^ #()
+	^ #(FamixTWithParameters FamixTInvocable FamixTWithInvocations FamixTWithReferences FamixTWithAccesses FamixTWithLocalVariables FamixTWithImplicitVariables FamixTWithSignature FamixTWithStatements)
 ]
 
 { #category : #metrics }

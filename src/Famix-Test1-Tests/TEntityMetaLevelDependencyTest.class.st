@@ -100,7 +100,7 @@ TEntityMetaLevelDependencyTest >> testAllChildrenTypes [
 
 	self assertCollection: c1 allChildrenTypes hasSameElements: { FamixTMethod. FamixTAttribute  }.
 	self assertCollection: c2 allChildrenTypes hasSameElements: { FamixTMethod. FamixTAttribute }.
-	self assertCollection: m1 allChildrenTypes hasSameElements: { }.
+	self assertCollection: m1 allChildrenTypes hasSameElements: { FamixTParameter. FamixTLocalVariable. FamixTImplicitVariable.}.
 	self assert: anchor1 allChildrenTypes isEmpty.
 ]
 
@@ -204,7 +204,7 @@ TEntityMetaLevelDependencyTest >> testChildren [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testChildrenSelectors [
 
-	self assertCollection: m1 childrenSelectors hasSameElements: { }.
+	self assertCollection: m1 childrenSelectors hasSameElements: { #parameters. #localVariables. #implicitVariables }.
 	self assertCollection: c1 childrenSelectors hasSameElements: { #methods . #attributes}.
 	self assertCollection: c2 childrenSelectors hasSameElements: { #methods . #attributes}.
 	self assertCollection: anchor1 childrenSelectors hasSameElements: { }.

@@ -1,8 +1,8 @@
 Class {
 	#name : #FamixJavaMethod,
 	#superclass : #FamixJavaContainerEntity,
-	#traits : 'FamixTInvocable + FamixTMethod + FamixTTypedStructure + FamixTWithAccesses + FamixTWithCaughtExceptions + FamixTWithClassScope + FamixTWithDeclaredExceptions + FamixTWithImplicitVariables + FamixTWithInvocations + FamixTWithLocalVariables + FamixTWithParameters + FamixTWithReferences + FamixTWithSignature + FamixTWithStatements + FamixTWithThrownExceptions',
-	#classTraits : 'FamixTInvocable classTrait + FamixTMethod classTrait + FamixTTypedStructure classTrait + FamixTWithAccesses classTrait + FamixTWithCaughtExceptions classTrait + FamixTWithClassScope classTrait + FamixTWithDeclaredExceptions classTrait + FamixTWithImplicitVariables classTrait + FamixTWithInvocations classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FamixTWithSignature classTrait + FamixTWithStatements classTrait + FamixTWithThrownExceptions classTrait',
+	#traits : 'FamixTMethod + FamixTWithCaughtExceptions + FamixTWithDeclaredExceptions + FamixTWithThrownExceptions',
+	#classTraits : 'FamixTMethod classTrait + FamixTWithCaughtExceptions classTrait + FamixTWithDeclaredExceptions classTrait + FamixTWithThrownExceptions classTrait',
 	#category : #'Famix-Java-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FamixJavaMethod class >> generatedSlotNames [
 { #category : #generator }
 FamixJavaMethod class >> generatedTraitNames [
 	<generated>
-	^ #(FamixTInvocable FamixTMethod FamixTTypedStructure FamixTWithAccesses FamixTWithCaughtExceptions FamixTWithClassScope FamixTWithDeclaredExceptions FamixTWithImplicitVariables FamixTWithInvocations FamixTWithLocalVariables FamixTWithParameters FamixTWithReferences FamixTWithSignature FamixTWithStatements FamixTWithThrownExceptions)
+	^ #(FamixTMethod FamixTWithCaughtExceptions FamixTWithDeclaredExceptions FamixTWithThrownExceptions)
 ]
 
 { #category : #meta }
