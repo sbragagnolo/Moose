@@ -1,6 +1,6 @@
 Class {
 	#name : #FamixStType,
-	#superclass : #FamixStContainerEntity,
+	#superclass : #FamixStNamedEntity,
 	#traits : 'FamixTReferenceable + FamixTType + FamixTWithTypedStructures',
 	#classTraits : 'FamixTReferenceable classTrait + FamixTType classTrait + FamixTWithTypedStructures classTrait',
 	#category : #'Famix-PharoSmalltalk-Entities-Entities'
@@ -9,7 +9,7 @@ Class {
 { #category : #meta }
 FamixStType class >> annotation [
 
-	<MSEClass: #Type super: #FamixStContainerEntity>
+	<MSEClass: #Type super: #FamixStNamedEntity>
 	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
@@ -19,7 +19,7 @@ FamixStType class >> annotation [
 FamixStType class >> requirements [
 
 	<generated>
-	^ { FamixStContainerEntity }
+	^ { FamixStScopingEntity }
 ]
 
 { #category : #adding }

@@ -241,7 +241,6 @@ FamixCompatibilityGenerator >> defineHierarchy [
 	containerEntity --|> #TWithClasses.
 	containerEntity --|> #TWithFunctions.
 	containerEntity --|> #TWithAnnotationTypes.
-	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.
 	declaredException --|> #TDeclaredException.

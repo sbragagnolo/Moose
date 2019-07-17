@@ -19,7 +19,7 @@ FamixJavaType class >> annotation [
 FamixJavaType class >> requirements [
 
 	<generated>
-	^ { FamixJavaContainerEntity }
+	^ { FamixJavaMethod }
 ]
 
 { #category : #'as yet unclassified' }

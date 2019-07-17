@@ -1,15 +1,15 @@
 Class {
 	#name : #FamixStClass,
-	#superclass : #FamixStType,
-	#traits : 'FamixTClass + FamixTClassHierarchyNavigation + FamixTWithExceptions',
-	#classTraits : 'FamixTClass classTrait + FamixTClassHierarchyNavigation classTrait + FamixTWithExceptions classTrait',
+	#superclass : #FamixStNamedEntity,
+	#traits : 'FamixTClass + FamixTClassHierarchyNavigation + FamixTType + FamixTWithExceptions',
+	#classTraits : 'FamixTClass classTrait + FamixTClassHierarchyNavigation classTrait + FamixTType classTrait + FamixTWithExceptions classTrait',
 	#category : #'Famix-PharoSmalltalk-Entities-Entities'
 }
 
 { #category : #meta }
 FamixStClass class >> annotation [
 
-	<MSEClass: #Class super: #FamixStType>
+	<MSEClass: #Class super: #FamixStNamedEntity>
 	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
@@ -19,7 +19,7 @@ FamixStClass class >> annotation [
 FamixStClass class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FamixStScopingEntity }
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
@@ -30,6 +30,32 @@ FamixStClass >> accessedAttributes [
 	Used to support the calculation of LCOM"
 	
 	^ self methodsWithoutSutbsAndConstructors asOrderedCollection flatCollect: [ :method | method accessedAttributes ]
+]
+
+{ #category : #accessing }
+FamixStClass >> belongsTo [
+
+	<generated>
+	^ self typeContainer
+
+]
+
+{ #category : #accessing }
+FamixStClass >> belongsTo: anObject [
+
+	<generated>
+	self typeContainer: anObject
+
+]
+
+{ #category : #'Famix-Implementation' }
+FamixStClass >> implementationOf: signature [
+	self withSuperclassesDo: [ :class | | found |
+			found := class methods
+				detect: [ :method | method signature = signature ]
+				ifNone: [ nil ].
+			found ifNotNil: [ ^found ] ].
+	^ nil
 ]
 
 { #category : #'Famix-Implementation' }

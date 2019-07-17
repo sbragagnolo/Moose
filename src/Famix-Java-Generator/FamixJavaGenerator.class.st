@@ -161,8 +161,10 @@ FamixJavaGenerator >> defineHierarchy [
 	method --|> #TWithThrownExceptions.
 	method --|> #TWithDeclaredExceptions.
 	method --|> #TWithCaughtExceptions.
-	method --|> #TWithClassScope.
 	method --|> #TWithStatements.
+	method --|> #TWithTypes.
+	method --|> #TWithClasses.
+	method --|> #TWithAnnotationTypes.
 
 	caughtException --|> exception.
 	caughtException --|> #TCaughtException.
@@ -171,12 +173,6 @@ FamixJavaGenerator >> defineHierarchy [
 	class --|> #TWithExceptions.
 	class --|> #TClass.
 	class --|> #TLCOMMetrics.
-
-	containerEntity --|> namedEntity.
-	containerEntity --|> #TWithTypes.
-	containerEntity --|> #TWithClasses.
-	containerEntity --|> #TWithAnnotationTypes.
-	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.
 	declaredException --|> #TDeclaredException.
@@ -235,7 +231,7 @@ FamixJavaGenerator >> defineHierarchy [
 	reference --|> association.
 	reference --|> #TReference.
 
-	scopingEntity --|> containerEntity.
+	scopingEntity --|> namedEntity.
 	scopingEntity --|> #TGlobalVariableScope.
 	scopingEntity --|> #TScopingEntity.
 

@@ -934,6 +934,8 @@ FamixGenerator >> defineHierarchy [
 	tClass --|> #TWithSubInheritances.
 	tClass --|> #TWithSuperInheritances.
 	tClass --|> #TWithAttributes.
+	tClass --|> #TReferenceable."
+	tClass --|> #TOODependencyQueries."
 	
 	tMethod --|> #TWithParameters.
 	tMethod --|> #TInvocable.
@@ -943,6 +945,8 @@ FamixGenerator >> defineHierarchy [
 	tMethod --|> #TWithLocalVariables.
 	tMethod --|> #TWithImplicitVariables.
 	tMethod --|> #TWithSignature.
+	tMethod --|> #TWithClassScope.
+	tMethod --|> #TTypedStructure.
 ]
 
 { #category : #definition }
